@@ -19,10 +19,21 @@ This project is a foundational template designed to create a first-person gaming
 Throughout this repository, you'll find a detailed description of each of these features, along with examples, explanations, and technical details to help you understand their implementation and functioning within the project.
 
 
-## Project Foundation
 
-This project is built upon Unreal Engine 5's Third Person template, which incorporates the use of the Enhanced Input system. This template provides a solid initial structure for user input handling and basic character interaction within the game environment. The FPWB_Character utilizes this foundation as a starting point, expanding and customizing functionalities to create a first-person experience with the inclusion of the character's body and other specific features outlined earlier.
+## Utilization of Enhanced Input System:
+
+This project utilizes the Enhanced Input system provided within the Unreal Engine 5's Third Person Game template. This functionality offers an enhanced set of tools for managing player input, enabling smoother and more advanced interaction with the game controls.
 
 
-![](![image](https://github.com/juanchini220/FPWB_Character/assets/53541328/72f1d619-9857-416b-af4f-1199e2cba2f0)
+![image](https://github.com/juanchini220/FPWB_Character/assets/53541328/72f1d619-9857-416b-af4f-1199e2cba2f0)
 
+
+## Implementation of Walking/Running:
+
+The logic behind this feature relies on checking various conditions when the player triggers the action. It verifies if the breathing audio is playing and if the player is in motion to ensure the system operates only when the character is actually running. Subsequently, it triggers the stamina feedback sound function and calls the UnCrouch event as a precaution in case the character is crouched.
+SetTimerByFunctionName is employed to execute a function in a way that it repeats at specific intervals. This function regulates the increase or decrease of stamina. While running, the stamina increase function is paused, and the decrease function is executed, and this process is reversed when the character is still or walking.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_Run-StaminaLogic.PNG?raw=true)
+
+
+To conclude this section, a TimeLine is utilized to provide a float named Alpha. This value gradually alters the MaxWalkSpeed and adjusts the camera's FieldOfView to add visual feedback that conveys a sense of speed while running.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_Run-StaminaLogic_02.PNG?raw=true)
