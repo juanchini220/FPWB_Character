@@ -24,4 +24,5 @@ Throughout this repository, you'll find a detailed description of each of these 
 This project is built upon Unreal Engine 5's Third Person template, which incorporates the use of the Enhanced Input system. This template provides a solid initial structure for user input handling and basic character interaction within the game environment. The FPWB_Character utilizes this foundation as a starting point, expanding and customizing functionalities to create a first-person experience with the inclusion of the character's body and other specific features outlined earlier.
 
 
+![](![image](https://github.com/juanchini220/FPWB_Character/assets/53541328/72f1d619-9857-416b-af4f-1199e2cba2f0)
 
