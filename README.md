@@ -37,3 +37,16 @@ SetTimerByFunctionName is employed to execute a function in a way that it repeat
 
 To conclude this section, a TimeLine is utilized to provide a float named Alpha. This value gradually alters the MaxWalkSpeed and adjusts the camera's FieldOfView to add visual feedback that conveys a sense of speed while running.
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_Run-StaminaLogic_02.PNG?raw=true)
+
+
+## Implementation of Crouching:
+
+For the crouching action, we use a simple FlipFlop that triggers the inherited functions from the Character Movement Component, Crouch, and UnCrouch. These functions alternate between walking speed and crouched speed, as well as adjust the size of the character's capsule collision.
+
+Upon crouching, we also call the StopRun event. If we are running, this event stops the run using the previously mentioned stamina system.
+
+The attached diagram also illustrates the jump logic. We utilize inherited functions from the Character Movement Component called Jump and StopJumping. Additionally, we call a JumpEvent, which is used to play the jump sound, a feature we will delve into later.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_CrouchJumpLogic.PNG?raw=true)
+To conclude, we call the UnCrouchEvent, which causes the character to stand up if we try to jump while crouched.
+
+
