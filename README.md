@@ -18,3 +18,10 @@ This project is a foundational template designed to create a first-person gaming
 
 Throughout this repository, you'll find a detailed description of each of these features, along with examples, explanations, and technical details to help you understand their implementation and functioning within the project.
 
+
+## Project Foundation
+
+This project is built upon Unreal Engine 5's Third Person template, which incorporates the use of the Enhanced Input system. This template provides a solid initial structure for user input handling and basic character interaction within the game environment. The FPWB_Character utilizes this foundation as a starting point, expanding and customizing functionalities to create a first-person experience with the inclusion of the character's body and other specific features outlined earlier.
+
+
+
