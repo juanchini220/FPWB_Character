@@ -107,6 +107,20 @@ Curve from animation instance
 
 ---
 
+## Implementation of Foot IK:
+
+Similar to the other features, we've created another Linked Anim Graph that combines all animations with a specific Control Rig for Foot IK. This Control Rig is activated only when the character is in contact with the ground.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_MainAnimGraph.PNG?raw=true)
+Below is the structure of the implemented Control Rig that procedurally positions the character's feet.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ControlRig_01.PNG?raw=true)
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ControlRig_02.PNG?raw=true)
+
+---
+
+Foot Trace Function
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ControlRig_FootTraceFunction.PNG?raw=true)
+
+---
 
 
 
