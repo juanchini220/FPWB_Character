@@ -33,7 +33,7 @@ Throughout this repository, you'll find a detailed description of each of these 
 This project utilizes the Enhanced Input system provided within the Unreal Engine 5's Third Person Game template. This functionality offers an enhanced set of tools for managing player input, enabling smoother and more advanced interaction with the game controls.
 
 
-![image](https://github.com/juanchini220/FPWB_Character/assets/53541328/72f1d619-9857-416b-af4f-1199e2cba2f0)
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_EnhancedIputSystem.PNG?raw=true)
 
 ---
 
