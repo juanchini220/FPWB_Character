@@ -39,8 +39,6 @@ This project utilizes the Enhanced Input system provided within the Unreal Engin
 
 ## Implementation of Walking/Running:
 
----
-
 <p align="center">
   <img src="https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/FPWB_WalkDirections.gif?raw=true" alt="Texto alternativo" width="1000" >
 </p>
@@ -107,6 +105,12 @@ The Yaw values are obtained through RootYawOffset, calculated within the TurnInP
 
 ## Implementation of Turn in Place:
 
+<p align="center">
+  <img src="https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/FPWB_TurnInPlace.gif?raw=true" alt="Texto alternativo" width="1000" >
+</p>
+
+---
+
 Similar to the Aim Offset, we use the same Linked Anim Graph for organizational purposes. In this case, we blend a RotateRootBone and utilize the Root Yaw Offset parameter, which is calculated in the TurnInPlace function.
 
 Within the TurnInPlace function, the initial check ensures that the character is not in motion because this animation only plays when the character is stationary.
@@ -124,6 +128,11 @@ Curve from animation instance
 ---
 
 ## Implementation of Foot IK:
+<p align="center">
+  <img src="https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/FPWB_IKFoots.gif?raw=true" alt="Texto alternativo" width="1000" >
+</p>
+
+---
 
 Similar to the other features, we've created another Linked Anim Graph that combines all animations with a specific Control Rig for Foot IK. This Control Rig is activated only when the character is in contact with the ground.
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_MainAnimGraph.PNG?raw=true)
