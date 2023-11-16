@@ -89,5 +89,25 @@ The Yaw values are obtained through RootYawOffset, calculated within the TurnInP
 
 ---
 
+## Implementation of Turn in Place:
+
+Similar to the Aim Offset, we use the same Linked Anim Graph for organizational purposes. In this case, we blend a RotateRootBone and utilize the Root Yaw Offset parameter, which is calculated in the TurnInPlace function.
+
+Within the TurnInPlace function, the initial check ensures that the character is not in motion because this animation only plays when the character is stationary.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_TurnInPlace_01.PNG?raw=true)
+
+In the visuals, we observe how rotations are calculated and cross-checked with the curves of Animation Instances named "Turning" to determine if the character is turning. Then, deltas are computed using the "RemainingTurnYaw" curve provided by the rotation Animation Instances.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_TurnInPlace_02.PNG?raw=true)
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_TurnInPlace_03.PNG?raw=true)
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_TurnInPlace_04.PNG?raw=true)
+
+Curve from animation instance
+
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/TurnCurve.PNG?raw=true)
+
+---
+
+
+
 
 
