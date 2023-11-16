@@ -2,6 +2,14 @@
 
 This project is a foundational template designed to create a first-person gaming experience that integrates the visualization of the character's body, offering players a heightened sense of realism. The primary goal is to provide a robust, modular structure allowing for the implementation and expansion of features related to character locomotion and interaction within the game world.
 
+---
+
+<p align="center">
+  <img src="https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/FPWB_Walk.gif?raw=true" alt="Texto alternativo" width="1000" >
+</p>
+
+---
+
 ## Key Features
 
 - **Walking/Running:** Implementation of a movement system enabling the character to seamlessly switch between walking and running with gradual changes in speed. A subtle visual feedback is incorporated into the camera to enhance player immersion. Additionally, an integrated stamina system is represented through sound effects.
@@ -30,6 +38,14 @@ This project utilizes the Enhanced Input system provided within the Unreal Engin
 ---
 
 ## Implementation of Walking/Running:
+
+---
+
+<p align="center">
+  <img src="https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/FPWB_WalkDirections.gif?raw=true" alt="Texto alternativo" width="1000" >
+</p>
+
+---
 
 The logic behind this feature relies on checking various conditions when the player triggers the action. It verifies if the breathing audio is playing and if the player is in motion to ensure the system operates only when the character is actually running. Subsequently, it triggers the stamina feedback sound function and calls the UnCrouch event as a precaution in case the character is crouched.
 SetTimerByFunctionName is employed to execute a function in a way that it repeats at specific intervals. This function regulates the increase or decrease of stamina. While running, the stamina increase function is paused, and the decrease function is executed, and this process is reversed when the character is still or walking.
