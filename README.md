@@ -50,3 +50,18 @@ The attached diagram also illustrates the jump logic. We utilize inherited funct
 To conclude, we call the UnCrouchEvent, which causes the character to stand up if we try to jump while crouched.
 
 
+## Implementation of Locomotion Sound:
+
+We use Notifies provided by Animation Sequences to trigger left and right footstep events. These events are used to play audio and can also be utilized in future projects to trigger particle systems, footprint decals, or other actions.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/AnimSequencer_Notifies.PNG?raw=true)
+Distinct MetaSound sources have been created for each physical material, dividing sounds between left and right footsteps for walking and running.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/MetaSound_FS_Concrete.PNG?raw=true)
+
+In the character's Event Graph, we employ a function that changes the MetaSound source depending on the physical material. This function utilizes the FindFloor function of the Character Movement Component to detect the type of physical material in contact with the character's capsule, allowing the audio source for footsteps to be changed accordingly.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ChangeSoundPhysicalMaterial_function.PNG?raw=true)
+Subsequently, the sound index parameter is set to play a random sound from the set of left or right footsteps, depending on whether the character is walking or running. Then, a brief delay is added, and the corresponding layer of cloth movement audio is played.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_LocomotionSounds.PNG?raw=true)
+For the jumping action, we follow a similar process. The MetaSound's index parameter changes the set of jump and landing audio.
+
+
+
