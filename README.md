@@ -122,6 +122,20 @@ Foot Trace Function
 
 ---
 
+## Postmortem:
 
+While the project has been successful in its implementation, I acknowledge that there are aspects that could be optimized in a more elegant manner. For instance, I consider the utilization of components that I will likely implement in future updates to the template.
+
+This experience has been an invaluable opportunity to discover the various tools offered by Unreal Engine for animation logic and sound implementation with MetaSound, a tool that I personally love and plan to work with more in the future.
+
+I'd like to express my gratitude to the YouTube channel of [Druid Mechanics](https://www.youtube.com/@DruidMechanicsGameDevelopment) for their invaluable assistance in understanding and developing the Turn In Place topic, a resource that was fundamental to the project.
+
+In the future, I intend to further refine certain aspects of the animations. Now, my next step will be to initiate a project based on this template to explore how far I can go using this solid foundation.
+
+---
+
+## Thank You for Reading:
+
+I genuinely appreciate your time spent reviewing this project. I hope the information provided has been interesting and useful. I hope you enjoy the project as much as I enjoyed creating it!
 
 
