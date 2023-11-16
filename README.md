@@ -18,7 +18,7 @@ This project is a foundational template designed to create a first-person gaming
 
 Throughout this repository, you'll find a detailed description of each of these features, along with examples, explanations, and technical details to help you understand their implementation and functioning within the project.
 
-
+---
 
 ## Utilization of Enhanced Input System:
 
@@ -27,6 +27,7 @@ This project utilizes the Enhanced Input system provided within the Unreal Engin
 
 ![image](https://github.com/juanchini220/FPWB_Character/assets/53541328/72f1d619-9857-416b-af4f-1199e2cba2f0)
 
+---
 
 ## Implementation of Walking/Running:
 
@@ -38,6 +39,7 @@ SetTimerByFunctionName is employed to execute a function in a way that it repeat
 To conclude this section, a TimeLine is utilized to provide a float named Alpha. This value gradually alters the MaxWalkSpeed and adjusts the camera's FieldOfView to add visual feedback that conveys a sense of speed while running.
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_Run-StaminaLogic_02.PNG?raw=true)
 
+---
 
 ## Implementation of Crouching:
 
@@ -49,6 +51,7 @@ The attached diagram also illustrates the jump logic. We utilize inherited funct
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_CrouchJumpLogic.PNG?raw=true)
 To conclude, we call the UnCrouchEvent, which causes the character to stand up if we try to jump while crouched.
 
+---
 
 ## Implementation of Locomotion Sound:
 
@@ -62,6 +65,29 @@ In the character's Event Graph, we employ a function that changes the MetaSound 
 Subsequently, the sound index parameter is set to play a random sound from the set of left or right footsteps, depending on whether the character is walking or running. Then, a brief delay is added, and the corresponding layer of cloth movement audio is played.
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/EventGraph_LocomotionSounds.PNG?raw=true)
 For the jumping action, we follow a similar process. The MetaSound's index parameter changes the set of jump and landing audio.
+
+---
+
+**Usage of BlueprintThreadSafeUpdateAnimation:**
+
+In the character's Animation Blueprint, we employ the BlueprintThreadSafeUpdateAnimation function. This function is used to compute all necessary variables for animation behaviors. This practice helps prevent potential bottlenecks when fetching data for animations, ensuring optimal performance.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_ThreadSafe.PNG?raw=true)
+
+---
+
+Now, let's proceed with the AimOffset feature:
+
+---
+
+## Implementation of AimOffset:
+
+We've utilized a Linked Anim Graph in the main Animation Blueprint to maintain organization. Within ABP_AimOffset, we blend the locomotion pose with an AimOffset that receives values for Yaw and Pitch.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_MainAnimGraph.PNG?raw=true)
+The Pitch values are obtained using BaseAimRotation, calculated within the Calculate Yaw Offset function.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_CalculateYawOffset.PNG?raw=true)
+The Yaw values are obtained through RootYawOffset, calculated within the TurnInPlace function. We'll delve deeper into this function in the next section when exploring the following feature.
+
+---
 
 
 
