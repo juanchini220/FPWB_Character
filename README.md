@@ -80,9 +80,9 @@ Now, let's proceed with the AimOffset feature:
 ---
 
 ## Implementation of AimOffset:
-
-We've utilized a Linked Anim Graph in the main Animation Blueprint to maintain organization. Within ABP_AimOffset, we blend the locomotion pose with an AimOffset that receives values for Yaw and Pitch.
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_MainAnimGraph.PNG?raw=true)
+We've utilized a Linked Anim Graph in the main Animation Blueprint to maintain organization. Within ABP_AimOffset, we blend the locomotion pose with an AimOffset that receives values for Yaw and Pitch.
+![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_AimOffserABP.PNG?raw=true)
 The Pitch values are obtained using BaseAimRotation, calculated within the Calculate Yaw Offset function.
 ![image](https://github.com/juanchini220/FPWB_Character/blob/main/Images%20and%20GIFs/ABP_CalculateYawOffset.PNG?raw=true)
 The Yaw values are obtained through RootYawOffset, calculated within the TurnInPlace function. We'll delve deeper into this function in the next section when exploring the following feature.
